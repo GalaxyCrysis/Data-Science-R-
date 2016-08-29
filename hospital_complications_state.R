@@ -4,8 +4,8 @@ library(ggplot2)
 data <- read.csv("Complications-State.csv",header = TRUE)
 #since we cant just use the dataframe we have to create lists
 #we decide to analyse the data for alabama hospitals
-alabama_better <- data$Number.of.Hospitals.Worse[which(data$State=="AL")]
-alabama_worse <- data$Number.of.Hospitals.Better[which(data$State=="AL")]
+alabama_better <- data$Number.of.Hospitals.Better[which(data$State=="AL")]
+alabama_worse <- data$Number.of.Hospitals.Worse[which(data$State=="AL")]
 
 #the variables in our 2 lists are characters so we need to transform them
 counter <-0
