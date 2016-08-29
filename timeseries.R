@@ -34,6 +34,6 @@ print(acf(apple$closep,plot=FALSE))
 arg <- ar(apple$closep)
 prediction <- predict(arg, n.ahead=4)
 #plot the prediction
-qplot(apple, prediction$pred)
+ts.plot(apple, prediction$pred)
 
 
