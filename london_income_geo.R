@@ -27,3 +27,9 @@ london@data <- left_join(london@data, boroughs)
 
 #now we can look a the map with qtm function from tmap
 qtm(london, "V42")
+
+#now we wanna see the boroughs where income is > 40000
+selection <- boroughs$V42 > 40000
+#now plot 
+plot(london, col = "grey")
+plot(london, col = "turquoise", add = TRUE)
