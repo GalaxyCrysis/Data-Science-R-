@@ -10,16 +10,9 @@ data <- read.csv("Complications-State.csv",header = TRUE)
 alabama_better <- data$Number.of.Hospitals.Better[which(data$State=="AL")]
 alabama_worse <- data$Number.of.Hospitals.Worse[which(data$State=="AL")]
 
-#the variables in our 2 lists are characters so we need to transform them
-counter <-0
-list <- list()
-for(i in alabama_better){if(i != "Not Available"){list[counter]<- strtoi(i); counter <- counter+1}}
-alabama_better <- unlist(list)
-
-counter <-0
-list <- list()
-for(i in alabama_worse){if(i != "Not Available"){list[counter]<- strtoi(i); counter <- counter+1}}
-alabama_worse <- unlist(list)
+#the variables in our 2 lists are not numeric we need to transform them
+alabama_better <- sapply(alabama_better, as.numeric)
+alabama_worse <- sapply(alabama_worse, as.numeric)
 
 #now we can get the statistics like median, mean etc for 
 #better hospitals and worse hospitals
