@@ -26,4 +26,4 @@ boroughs <- rename(boroughs, name = V2)
 london@data <- left_join(london@data, boroughs)
 
 #now we can look a the map with qtm function from tmap
-qtm(lonodn, "V42")
+qtm(london, "V42")
