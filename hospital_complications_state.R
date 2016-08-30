@@ -30,8 +30,4 @@ better_summary <- summary(alabama_better)
 alabama_pear <- cor(alabama_better,alabama_worse,method = "pearson")
 alabama_spear <- cor(alabama_better,alabama_worse,method="spearman")
 
-#now see all states and too few hospitals by pressure sores
-pressure_sores <- data.frame(data$State[which(data$Measure.Name == "Pressure sores")],
-                             data$Number.of.Hospitals.Too.Few[which(data$Measure.Name == "Pressure sores")],
-                             row.names = c("State","Hospital"))
-#get map data for mapping
+
