@@ -27,7 +27,7 @@ ts.plot(components)
 
 #now i wanna plot the average with TTR MA function
 moving_average <- SMA(apple$closep,n=15)
-apple <- rbind(applee, moving_average)
+apple <- rbind(apple, moving_average)
 ggplot(data=apple, aes(date))
 + geom_line(aes(y=closep),colour="red",linetype="dashed",size=1.7)
 + geom_line(aes(y=moving_average), colour="blue", linetype="dashed", size=1.7)
