@@ -6,7 +6,7 @@ library(ggplot2)
 connection <- dbConnect(RMySQL::MySQL(),dbname="stocks", user ="root",password="password")
 
 #get data from the apple table
-rows <- dbSendQuery(connection,"SELECT closep,date FROM apple")
+rows <- dbSendQuery(connection,"SELECT closep,openp,date FROM apple")
 apple_data <- dbFetch(rows, n = -1)
 
 #or get data from local file of my workstation
