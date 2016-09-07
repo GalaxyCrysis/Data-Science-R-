@@ -24,6 +24,7 @@ print(summary(apple$closep))
 
 #correlation
 print(cor(apple$closep,apple$openp,method="spearman"))
+print(cor(apple$closep,apple$openp,method="pearson"))
 
 #probability distributions
 print(pnorm(apple$closep))
