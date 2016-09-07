@@ -26,7 +26,7 @@ components <-  decompose(apple)
 ts.plot(components)
 
 #now i wanna plot the average with TTR MA function
-moving_average = SMA(apple$closep,n=15)
+moving_average <- SMA(apple$closep,n=15)
 apple <- rbind(applee, moving_average)
 ggplot(data=apple, aes(date))
 + geom_line(aes(y=closep),colour="red",linetype="dashed",size=1.7)
