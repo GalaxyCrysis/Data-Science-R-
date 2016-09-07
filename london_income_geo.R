@@ -32,4 +32,4 @@ qtm(london, "V42")
 selection <- boroughs$V42 > 40000
 #now plot 
 plot(london, col = "grey")
-plot(london, col = "turquoise", add = TRUE)
+plot(london[selection,], col = "turquoise", add = TRUE)
